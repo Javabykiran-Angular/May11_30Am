@@ -1,0 +1,24 @@
+<p>property-binding works!</p>
+
+<!-- property binding always works on attributes -->
+<!-- syntax => [attribute_name]="Property_name" -->
+
+<input type="text" [value]="name"
+placeholder="Enter the Name">
+
+<br><br>
+<img [src]="imgUrl" 
+class="myImage">
+
+<hr>
+<h2>Difference Between String Interpolation VS Property Binding </h2>
+
+<div hidden =" {{isHidden}} ">
+Using String Interpolation
+</div> 
+<br><br>
+
+<div [hidden]="isHidden">
+    Using Property Binding
+</div>
+
