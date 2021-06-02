@@ -1,0 +1,22 @@
+<p>event-binding2 works!</p>
+
+<!-- $event => It is special variable given by angular
+if you want current dom element information  -->
+<button (click)="OnEventClick($event)"
+value="Event Occur!!"
+>
+    Click</button>
+<hr>
+
+<input #myinput type="text" 
+placeholder="Enter the Name..."  > <br><br>
+<button (click)="onTemplate(myinput)" >Send</button>
+
+<hr>
+
+<input #myinput1 type="text" 
+placeholder="Enter the Name..."  > <br><br>
+<button (click)="onTemplate1(myinput1.value)" >Send</button>
+<hr>
+
+<input #myinput2  type="text" (change)="onChange(myinput2)">
