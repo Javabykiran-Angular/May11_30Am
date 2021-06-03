@@ -1,0 +1,32 @@
+<p>event-binding3 works!</p>
+
+<label for="">Num1:: </label>&nbsp;&nbsp;
+<input  #num1 type="text" placeholder="Enter the Number1"> <br><br>
+
+<label for="">Num2:: </label>&nbsp;&nbsp;
+<input #num2 type="text" placeholder="Enter the Number2"><br><br>
+
+<button (click)="OnAddition(num1.value,num2.value)">Addition</button> <br><br>
+
+<label for="">Result:: </label>&nbsp;&nbsp;
+<input type="text" [value]="result"
+placeholder="Result">
+
+<hr>
+<!-- Angular gives ngModel=> it perform two way binding  -->
+
+<input type="text" [(ngModel)]="name"
+placeholder="Enter The Name"> {{name}} <hr>
+
+<h2>Key Up And Key Down Event</h2>
+
+<input type="text" (keyup)="onKeyUp()"
+placeholder="Enter the Name..."> <br><br>
+
+<input type="text" (keydown)="onKeyDown()"
+placeholder="Enter the Name...">
+<hr>
+
+<button (click)="output=8+8">Click Event</button>
+<br> <h2> {{output}} </h2>
+
