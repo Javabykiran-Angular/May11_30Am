@@ -1,0 +1,56 @@
+<p>if-directive works!</p>
+<!-- ngStyle,ngClass,ngModel => Attribute directive -->
+
+<!-- structural directive => U can modify your dom structure, manipulate the structure
+*ngIf => To check any condition
+*ngFor => dynamic data iteration
+*ngSwitch => particular case 
+-->
+
+<!-- <div *ngIf="rating<4">
+    <h2>Condition is True..</h2>
+
+</div> <br><br> -->
+
+<!-- <div *ngIf="rating1<4; else elsepart">
+    <h2>Condition is True..</h2>
+
+
+</div> <br> -->
+<!-- <div #elsepart>
+    <h2> Condition is false </h2>
+</div> -->
+
+<!-- <ng-template #elsepart >
+    <h2> Condition is false </h2>   
+
+</ng-template> -->
+
+<hr>
+
+
+<div *ngIf="rating2<4;then mainpart else myelsepart">
+
+</div>
+<ng-template #mainpart>
+    <h2>U Are in Main Part..</h2>
+</ng-template>
+
+<ng-template #myelsepart>
+    <h2>U are in Else Part</h2>
+</ng-template>
+
+<hr>
+
+<div *ngIf="rating3<4; else elsepart1">
+    <h2>U are in if condition is true</h2>
+</div>
+
+<ng-template #elsepart1>
+    <div *ngIf="rating3>4 && rating3<20">
+        <h2>U are in Elsepart of nested if else</h2>
+    </div>
+</ng-template>
+
+
+
