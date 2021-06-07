@@ -1,0 +1,67 @@
+<p>for-directive works!</p>
+
+<!-- <ul>
+    <li *ngFor="let item of course"> {{item}} </li>
+</ul>
+<br>
+
+<ul>
+    <li *ngFor="let item of course;index as i"> {{i+1}} {{item}} </li>
+</ul>
+<br>
+
+<ul>
+    <li *ngFor="let item of course;index as i"> 
+        <div *ngIf="i==2 || i==3">
+            {{i+1}} {{item}} 
+        </div>
+       
+    </li>
+</ul>
+<hr> -->
+<table border="1px">
+    <thead>
+        <th>#</th>
+        <th>Product Name</th>
+        <th>Product Price</th>
+        <th>Product Quantity</th>
+        <th>Product Description</th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let item of productArr;index as i">
+            <td> {{i+1}} </td>
+            <td> {{item.name}} </td>
+            <td> {{item.price}} </td>
+            <td> {{item.quantity}} </td>
+            <td> {{item.des}} </td>
+        </tr>
+    </tbody>
+</table>
+<hr>
+
+
+<table border="1px">
+    <thead>
+        <th>#</th>
+        <th>Product Name</th>
+        <th>Product Price</th>
+        <th>Product Quantity</th>
+        <th>Product Description</th>
+    </thead>
+    <tbody>
+        <tr 
+        *ngFor="let item of productArr;index as i"
+            (mouseover)="onMouseOver(item)"
+            [ngClass]="{
+                'highlight':selected==item.name
+            }"
+            (mouseout)="onMouseOut()"
+        >
+            <td> {{i+1}} </td>
+            <td> {{item.name}} </td>
+            <td> {{item.price}} </td>
+            <td> {{item.quantity}} </td>
+            <td> {{item.des}} </td>
+        </tr>
+    </tbody>
+</table>
