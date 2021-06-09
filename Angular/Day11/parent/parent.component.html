@@ -1,0 +1,11 @@
+<p>parent works!</p>
+
+<!-- <app-child1 [parentData]="str"></app-child1> -->
+
+<!-- <app-child1 [parentjson]="jsonobj" [parentData]="str" ></app-child1> -->
+
+<button (click)="onSendData()">Send Data</button>
+
+<app-child1 [ParentClick]="clickdata"  
+[parentArr]="prodarr"
+></app-child1>

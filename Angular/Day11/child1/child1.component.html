@@ -1,0 +1,15 @@
+<p>child1 works!</p>
+
+<h2> {{parentData}} </h2>
+
+<h2>Name :: {{parentjson.name}} </h2>
+<h2>ID:: {{parentjson.id}} </h2>
+<h3> Status :: {{parentjson.status}} </h3>
+
+<h2> On Click Data :: {{ParentClick}} </h2>
+
+<ul>
+    <li *ngFor="let item of parentArr">
+        {{item.name}}  {{item.price}}
+    </li>
+</ul>
