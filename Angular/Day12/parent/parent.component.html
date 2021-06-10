@@ -1,0 +1,44 @@
+<p>parent works!</p>
+
+<h2> {{ChildToParentStr}} </h2>
+
+<h2> Name:: {{ChildToParentJson.name}} </h2>
+<h2>ID :: {{ChildToParentJson.id}} </h2>
+<h2> Role :: {{ChildToParentJson.role}} </h2>
+
+<!-- <app-child1 [parentData]="str"></app-child1> -->
+
+<!-- <app-child1 [parentjson]="jsonobj" [parentData]="str" ></app-child1> -->
+
+<!-- <button (click)="onSendData()">Send Data</button>
+
+<app-child1 [ParentClick]="clickdata"  
+[parentArr]="prodarr"
+></app-child1> -->
+
+<!-- <app-child2 (childStrEvent)="ChildToParentStr=$event"></app-child2> -->
+<hr>
+
+<table >
+    <thead>
+        <th>#</th>
+        <th>Name</th>
+        <th>Id</th>
+        <th>Role</th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let item of ChildToParentArr;let i=index">
+            <td> {{i+1}} </td>
+            <td> {{item.name}} </td>
+            <td> {{item.id}} </td>
+            <td> {{item.role}} </td>
+        </tr>
+    </tbody>
+</table>
+
+<hr>
+<app-child2 
+(childJsonEvent)="ChildToParentJson=$event"
+(childArrEvent)="ChildToParentArr=$event"
+>
+</app-child2>
