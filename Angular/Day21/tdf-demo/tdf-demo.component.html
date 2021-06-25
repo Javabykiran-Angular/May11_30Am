@@ -1,0 +1,33 @@
+<p>tdf-demo works!</p>
+
+<div class="container">
+
+        <div class="row">
+            <div class="col-6 col-sm-6 col-md-6 col-lg-6">
+
+                <form >
+
+                    <div class="form-group">
+                        <label for="">Username::</label>
+                        <input type="text" class="form-control"
+                            ngModel name="myusername"
+                            #username="ngModel" 
+                         placeholder="Enter the Username" required >
+
+                         <div class="alert alert-danger" 
+                            *ngIf="username.touched && username.invalid"
+                         >
+                            ** Please Enter the Username.....
+                         </div>
+
+
+                    </div>
+
+                    <button class="btn btn-success">Submit</button>
+
+                </form>
+
+            </div>
+        </div>
+
+</div>
